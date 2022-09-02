@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Random Number Generator</title>
+        <style>
+            body {
+                background: black;
+                margin: none;
+                display: flex;
+                min-height: 100vh;
+                max-height: 100vh;
+                overflow: hidden;
+                color: white;
+            }
+            #nameDiv {
+                margin: auto;
+                font-size: 30px;
+                font-family: cambria;
+                font-weight: 800;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nameDiv"></div>
+        <script>
+            
+            
+            //Create a setInterval function to run code every 5 minutes;
+            setInterval(()=>{
+                //Define all the variables associated with the code
+                let numValue = Math.floor(Math.random() * 9);
+                let alphaSeries = ["a", "b", "c", "d", "e", "f"];
+                let alphaValue = alphaSeries[Math.floor(Math.random() * alphaSeries.length)];
+                let finalDeterminer = Math.ceil(Math.random() * 1);
+                let finalArray = [numValue, alphaValue];
+                
+                nameDiv.innerText = finalArray[Math.floor(Math.random() * finalArray.length)];
+            }, 300000);
+            
+        </script>
+    </body>
+</html>
